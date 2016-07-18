@@ -1,1 +1,1 @@
-The rxNotify component provides status message notifications on a page.
+The Notifications component provides status message notifications on a page.
