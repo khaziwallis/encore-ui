@@ -66,7 +66,7 @@ module.exports = function (grunt) {
         // }
         for (key in metadata) {
             if (examples[key]) {
-                throw new Error(`Examples for '${key}' already defined.`);
+                throw new Error("Examples for '${key}' already defined.");
             }
 
             var example = {};
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
                         example.less = fileContent;
                         break;
                     default:
-                        throw new Error(`Unknown file extension: ${ext}`);
+                        throw new Error("Unknown file extension: '${ext}'");
                         break;
                 }
             });
