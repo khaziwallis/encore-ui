@@ -165,18 +165,6 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                 }
             }
         })
-        .when('/elements/:element/:subelement', {
-            templateUrl: 'templates/modules/showModule.html',
-            controller: 'showModuleController',
-            resolve: {
-                'module': function ($route, Modules) {
-                    return _.find(Modules, {
-                        'name': $route.current.params.subelement,
-                        category: 'elements'
-                    });
-                }
-            }
-        })
 
         /* Component Pages */ /* Deprecated in favor of Elements */
         .when('/components', {
@@ -321,13 +309,7 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                         },
                         {
                             linkText: 'Tables',
-                            href: '#/elements/Tables',
-                            children: [
-                                {
-                                    linkText: 'Select Filter',
-                                    href: '#/elements/Tables/rxSelectFilter'
-                                }
-                            ]
+                            href: '#/elements/Tables'
                         },
                         {
                             linkText: 'Tabs',

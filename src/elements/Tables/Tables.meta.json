@@ -1,6 +1,6 @@
 {
     "displayName": "Tables",
-    "stability": "unstable",
+    "stability": "stable",
     "description": "Usage and examples of different Table patterns.",
     "hasApi": false,
     "keywords": [
