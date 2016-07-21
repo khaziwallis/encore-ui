@@ -262,68 +262,7 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                 },
                 {
                     linkText: 'Elements',
-                    children: [
-                        {
-                            linkText: 'Account Info',
-                            href: '#/elements/AccountInfo'
-                        },
-                        {
-                            linkText: 'Action Menu',
-                            href: '#/elements/ActionMenu'
-                        },
-                        {
-                            linkText: 'Breadcrumbs',
-                            href: '#/elements/Breadcrumbs'
-                        },
-                        {
-                            linkText: 'Buttons',
-                            href: '#/elements/Buttons'
-                        },
-                        {
-                            linkText: 'Collapse',
-                            href: '#/elements/Collapse'
-                        },
-                        {
-                            linkText: 'Feedback',
-                            href: '#/elements/Feedback'
-                        },
-                        {
-                            linkText: 'Forms',
-                            href: '#/elements/Forms'
-                        },
-                        {
-                            linkText: 'Links',
-                            href: '#/elements/Links'
-                        },
-                        {
-                            linkText: 'Lists',
-                            href: '#/elements/Lists'
-                        },
-                        {
-                            linkText: 'Metadata',
-                            href: '#/elements/Metadata'
-                        },
-                        {
-                            linkText: 'Progress Bars',
-                            href: '#/elements/progressbar'
-                        },
-                        {
-                            linkText: 'Tables',
-                            href: '#/elements/Tables'
-                        },
-                        {
-                            linkText: 'Tabs',
-                            href: '#/elements/Tabs'
-                        },
-                        {
-                            linkText: 'Tags',
-                            href: '#/elements/Tags'
-                        },
-                        {
-                            linkText: 'Tooltips',
-                            href: '#/elements/Tooltips'
-                        }
-                    ]
+                    children: linksForModuleCategory('elements')
                 },
                 {
                     linkText: 'Utilities',
