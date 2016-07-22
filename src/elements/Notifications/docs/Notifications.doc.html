@@ -1,130 +1,16 @@
 <!-- Sample HTML goes here as a live example of how to the component can be used -->
-<div ng-controller="rxNotifyCtrl">
-  <div layout="row">
-    <div rx-form flex>
-      <rx-form-section>
-        <rx-field>
-          <rx-field-name>Message Text:</rx-field-name>
-          <rx-field-content>
-            <rx-input>
-              <input type="text" ng-model="message" />
-            </rx-input>
-          </rx-field-content>
-        </rx-field>
+<p>
+   The Notifications component provides status message notifications on a page.
+</p>
 
-        <rx-field>
-          <rx-field-name>Timeout:</rx-field-name>
-          <rx-field-content>
-            <rx-input>
-              <input type="number" min="-1" ng-model="options.timeout" />
-              <rx-suffix>seconds</rx-suffix>
-            </rx-input>
-          </rx-field-content>
-        </rx-field>
-      </rx-form-section>
+<h2><rx-permalink>Simple Notifications</rx-permalink></h2>
+<rx-example name="notifications.simple"></rx-example>
 
-      <rx-form-section>
-        <rx-field>
-          <rx-field-name>Type:</rx-field-name>
-          <rx-field-content>
-            <rx-input ng-repeat="type in types">
-              <input rx-radio name="notify-type" id="radType_{{$index}}" ng-model="options.type" value="{{type}}" />
-              <label for="radType_{{$index}}">{{type| rxCapitalize}}</label>
-            </rx-input>
-          </rx-field-content>
-        </rx-field>
+<h2><rx-permalink>Stack Notifications</rx-permalink></h2>
+<rx-example name="notifications.stack"></rx-example>
 
-        <rx-field>
-          <rx-field-name>Show:</rx-field-name>
-          <rx-field-content>
-            <rx-input>
-              <input rx-radio name="notify-show" id="radNotify_immediate" ng-model="options.show" value="immediate" />
-              <label for="radNotify_immediate">Immediately</label>
-            </rx-input>
-            <rx-input>
-              <input rx-radio name="notify-show" id="radNotify_next" ng-model="options.show" value="next" />
-              <label for="radNotify_next">Next</label>
-            </rx-input>
-          </rx-field-content>
-        </rx-field>
-      </rx-form-section>
+<h2><rx-permalink>Promise Notifications</rx-permalink></h2>
+<rx-example name="notifications.promise"></rx-example>
 
-      <rx-form-section>
-        <rx-field>
-          <rx-field-name>Options:</rx-field-name>
-          <rx-field-content>
-            <rx-input>
-              <input rx-checkbox id="chkRepeat" ng-model="options.repeat" />
-              <label for="chkRepeat">Repeat</label>
-            </rx-input>
-            <rx-input>
-              <input rx-checkbox id="chkAlertOnDismiss" ng-model="ondismiss.should" />
-              <label for="chkAlertOnDismiss">Alert On Dismiss</label>
-            </rx-input>
-            <rx-input>
-              <input rx-checkbox id="chkLoading" ng-model="options.loading" />
-              <label for="chkLoading">Loading? (shows spinner)</label>
-            </rx-input>
-          </rx-field-content>
-        </rx-field>
-      </rx-form-section>
-
-      <rx-form-section>
-        <div>
-          <button class="button" ng-click="add('demo')">Add to Demo Stack</button>
-          <button class="button" ng-click="add('custom')">Add to Custom Stack</button>
-        </div>
-      </rx-form-section>
-
-      <rx-form-section>
-        <div>
-          <h3>rxPromiseNotifications</h3>
-          <p>Please see <a href="#/utilities/rxPromiseNotifications">rxPromiseNotifications</a> demo.</p>
-        </div>
-      </rx-form-section>
-
-      <rx-form-section>
-        <div>
-          <h3>Simulated Route Changes</h3>
-          <button class="button" ng-click="routeChange()">Simulate Route Change</button>
-        </div>
-      </rx-form-section>
-    </div>
-
-    <div flex layout="column" layout-align="top stretch">
-      <div>
-        <h2>Demo Stack</h2>
-        <rx-notifications stack="demo"></rx-notifications>
-      </div>
-
-      <div>
-        <h2>Custom Stack</h2>
-        <rx-notifications stack="custom"></rx-notifications>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <h2>Using rxNotification</h2>
-  <rx-notification type="error">Hello, world! <a href="#">This is a link.</a></rx-notification>
-  <rx-notification type="warning">Hello, world! <a href="#">This is a link.</a></rx-notification>
-  <rx-notification type="info">Hello, world! <a href="#">This is a link.</a></rx-notification>
-  <rx-notification type="success">Hello, world! <a href="#">This is a link.</a></rx-notification>
-
-  <h3>Using rxNotification with custom stack</h3>
-  <div layout="row">
-    <div flex>
-      <h4>Demo Stack (demo-stack)</h4>
-      <rx-notifications stack="demo-stack"></rx-notifications>
-    </div>
-
-    <div flex>
-      <h4>Custom Stack (custom-stack)</h4>
-      <rx-notifications stack="custom-stack"></rx-notifications>
-    </div>
-  </div>
-
-  <rx-notification stack="demo-stack" type="info">Hello, world in demo-stack stack!</rx-notification>
-  <rx-notification stack="custom-stack" type="warning">Hello, world in custom-stack stack!</rx-notification>
-</div>
+<h2><rx-permalink>Route Notifications</rx-permalink></h2>
+<rx-example name="notifications.route"></rx-example>

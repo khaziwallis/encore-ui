@@ -1,5 +1,9 @@
 describe('encore.ui.rxApp', function () {
     describe('rxApp', function () {
+
+        beforeEach(function () {
+            module('templates/rxFeedback.html');
+        });
         describe('default', function () {
             var scope, scopeCustomNav, collapsibleScope, compile, rootScope, el, elCustom, elCollapsible,
                 httpMock, cdnPath, cdnGet;
@@ -43,7 +47,7 @@ describe('encore.ui.rxApp', function () {
                 // load module
                 module('encore.ui.rxApp');
                 module('encore.ui.utilities');
-                module('encore.ui.rxNotify');
+                module('encore.ui.elements');
 
                 // load templates
                 module('templates/rxApp.html');
@@ -219,7 +223,7 @@ describe('encore.ui.rxApp', function () {
             beforeEach(function () {
                 module('encore.ui.rxApp');
                 module('encore.ui.utilities');
-                module('encore.ui.rxNotify');
+                module('encore.ui.elements');
                 module(function ($provide) {
                     $provide.value('Environment', mockEnvironment);
                     $provide.value('routesCdnPath', mockCdnPath);
@@ -384,7 +388,7 @@ describe('encore.ui.rxApp', function () {
 
                 // load module
                 module('encore.ui.utilities');
-                module('encore.ui.rxNotify');
+                module('encore.ui.elements');
 
                 // load templates
                 module('templates/rxApp.html');
@@ -474,7 +478,7 @@ describe('encore.ui.rxApp', function () {
                 // load module
                 module('encore.ui.rxApp');
                 module('encore.ui.utilities');
-                module('encore.ui.rxNotify');
+                module('encore.ui.elements');
 
                 // load templates
                 module('templates/rxApp.html');
