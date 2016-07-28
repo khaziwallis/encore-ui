@@ -1,5 +1,5 @@
 angular.module('demoApp')
-.controller('rxFormDemoCtrl', function ($scope) {
+.controller('optionTableDemoCtrl', function ($scope) {
     /* ========== DATA ========== */
     $scope.volumeTypes = [
         {
@@ -46,43 +46,6 @@ angular.module('demoApp')
             'value': 'RNA',
             'label': 'RNA'
         }
-    ];
-
-    $scope.services = [
-        {
-            'value': 'good',
-            'label': 'Good Service'
-        },
-        {
-            'value': 'cheap',
-            'label': 'Cheap Service'
-        },
-        {
-            'value': 'fast',
-            'label': 'Fast Service'
-        },
-        {
-            'value': 'custom',
-            'label': 'Custom Service'
-        }
-    ];
-
-    $scope.beatles = [
-        'Paul McCartney',
-        'John Lennon',
-        'Ringo Starr',
-        'George Harrison'
-    ];
-
-    $scope.nevers = [
-        'Give you up',
-        'Let you down',
-        'Run around',
-        'Desert you',
-        'Make you cry',
-        'Say goodbye',
-        'Tell a lie',
-        'Hurt you'
     ];
 
     $scope.optionTableData = [
@@ -154,15 +117,6 @@ angular.module('demoApp')
         return rowId === 'option4_id';
     };
 
-    /* ========== FORM MODELS ========== */
-    $scope.simple = {
-        userEmail: '',
-        // TODO: use isNameRequired for rxFieldName "required" midway tests
-        // TODO: remove this comment after completed
-        isNameRequired: true,
-        volumeName: ''
-    };
-
     $scope.intermediate = {
         volumeType: _.first($scope.volumeTypes).value, // select the first type by default
         services: [],
@@ -177,35 +131,6 @@ angular.module('demoApp')
             radio: 0,
             checkbox: [true, 'unchecked'], // example with first checkbox automatically checked
             empty: [true, 'unchecked']
-        }
-    };
-
-    $scope.advanced = {
-        radChoice: 'default',
-        inputEnabled: false
-    };
-});
-
-// A dummy directive only used within the rxForm demo page.
-// It's used to check that some string contains 'foo', and works
-// with ngForm to set the appropriate `.$error` value
-// Note: This code is easier to write in Angular 1.3, because
-// you can use `.$validators` instead of `.$parsers`
-angular.module('encore.ui.rxForm')
-.directive('foocheck', function () {
-    return {
-        require: 'ngModel',
-        link: function (scope, elm, attrs, ctrl) {
-            // Put a new validator on the beginning
-            ctrl.$parsers.unshift(function (viewValue) {
-                if (_.contains(viewValue, 'foo')) {
-                    ctrl.$setValidity('foocheck', true);
-                    return viewValue;
-                } else {
-                    ctrl.$setValidity('foocheck', false);
-                    return undefined;
-                }
-            });
         }
     };
 });

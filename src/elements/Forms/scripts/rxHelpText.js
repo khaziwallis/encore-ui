@@ -1,4 +1,4 @@
-angular.module('encore.ui.rxForm')
+angular.module('encore.ui.elements')
 /**
  * @name rxForm.directive:rxHelpText
  * @ngdoc directive

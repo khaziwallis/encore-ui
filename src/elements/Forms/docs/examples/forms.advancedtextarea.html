@@ -1,0 +1,19 @@
+<form rx-form name="advancedTextAreaForm">
+  <rx-form-section>
+    <rx-field>
+      <rx-field-name
+        id="fieldNameRequiredTextarea"
+        ng-required="true">Required Textarea:</rx-field-name>
+      <rx-field-content>
+        <rx-input>
+          <textarea
+            name="lifeStory"
+            rows="10"
+            ng-required="true"
+            ng-model="lifeStory"
+            rx-character-count></textarea>
+        </rx-input>
+      </rx-field-content>
+    </rx-field>
+  </rx-form-section>
+</form>

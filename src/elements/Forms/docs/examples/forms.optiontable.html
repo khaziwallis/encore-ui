@@ -1,0 +1,66 @@
+<form rx-form name="optionTableForm" ng-controller="optionTableDemoCtrl">
+  <rx-form-section>
+    <rx-field>
+      <rx-field-name>Radio Option Table</rx-field-name>
+      <rx-field-content>
+        <rx-input>
+          <rx-option-table
+              id="radioOptionTable"
+              data="optionTableData"
+              columns="optionTableColumns"
+              type="radio"
+              model="intermediate.table.radio"
+              field-id="optionTable"
+              selected="0"
+              class="full-width"
+              disable-fn="disableOption(tableId, fieldId, rowId)"
+              ></rx-option-table>
+        </rx-input>
+        <rx-help-text>Bound Value: {{intermediate.table.radio}}</rx-help-text>
+      </rx-field-content>
+    </rx-field>
+  </rx-form-section>
+
+  <rx-form-section>
+    <rx-field>
+      <rx-field-name>Checkbox Option Table</rx-field-name>
+      <rx-field-content>
+        <rx-input>
+          <rx-option-table
+              columns="optionTableColumns"
+              type="checkbox"
+              id="checkboxOptionTable"
+              model="intermediate.table.checkbox"
+              field-id="optionCheckboxTable"
+              data="optionTableCheckboxData"
+              required="true"
+              ></rx-option-table>
+        </rx-input>
+        <rx-help-text ng-repeat="val in intermediate.table.checkbox">
+          Item {{$index + 1}} Value: {{val}}
+        </rx-help-text>
+      </rx-field-content>
+    </rx-field>
+  </rx-form-section>
+
+  <rx-form-section>
+    <rx-field>
+      <rx-field-name>Empty Option Table</rx-field-name>
+      <rx-field-content>
+        <rx-input>
+          <rx-option-table
+              columns="optionTableColumns"
+              type="checkbox"
+              id="emptyOptionTable"
+              model="intermediate.table.empty"
+              field-id="optionCheckboxTable"
+              data="optionTableEmptyData"
+              empty-message="You don't have any data!"
+              ></rx-option-table>
+        </rx-input>
+      </rx-field-content>
+    </rx-field>
+  </rx-form-section>
+
+</form>
+
