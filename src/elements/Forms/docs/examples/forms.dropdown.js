@@ -66,9 +66,7 @@ angular.module('demoApp')
             'label': 'Custom Service'
         }
     ];
-
-    $scope.intermediate = {
-        volumeType: _.first($scope.volumeTypes).value, // select the first type by default
-        services: []
-    };
+    // select the first type by default
+    $scope.volumeType = _.first($scope.volumeTypes).value;
+    $scope.emptyServices = [];
 });

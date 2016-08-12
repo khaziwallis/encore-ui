@@ -1,14 +1,10 @@
 angular.module('demoApp')
 .controller('formIntermediateControlsDemoCtrl', function ($scope) {
     
-    /* ========== FORM MODELS ========== */
-    $scope.simple = {
-        userEmail: '',
-        // TODO: use isNameRequired for rxFieldName "required" midway tests
-        // TODO: remove this comment after completed
-        isNameRequired: true,
-        volumeName: ''
-    };
+    $scope.userEmail = '';
+    // TODO: use isNameRequired for rxFieldName "required" midway tests
+    $scope.isNameRequired = true;
+    $scope.volumeName = '';
 })
 
 // A dummy directive only used within the rxForm demo page.

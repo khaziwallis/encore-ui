@@ -57,9 +57,7 @@ angular.module('demoApp')
         return rowId === 'option4_id';
     };
 
-    $scope.intermediate = {
-        table: {
-            radio: 0
-        }
+    $scope.table = {
+        radio: 0
     };
 });

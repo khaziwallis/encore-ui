@@ -5,13 +5,13 @@
       <rx-field-name>Volume Type:</rx-field-name>
       <rx-field-content>
         <rx-input>
-          <select rx-select ng-model="intermediate.volumeType" id="selVolumeType">
+          <select rx-select ng-model="volumeType" id="selVolumeType">
             <option ng-repeat="type in volumeTypes"
               value="{{type.value}}"
               ng-selected="{{type.value == model}}">{{type.label}}</option>
           </select>
         </rx-input>
-        <rx-help-text>Bound Value: {{intermediate.volumeType}}</rx-help-text>
+        <rx-help-text>Bound Value: {{volumeType}}</rx-help-text>
       </rx-field-content>
     </rx-field>
 
@@ -20,7 +20,7 @@
       <rx-field-name>Service Options:</rx-field-name>
       <rx-field-content>
         <rx-input>
-          <rx-multi-select ng-model="intermediate.services" id="mselServices">
+          <rx-multi-select ng-model="emptyServices" id="mselServices">
             <rx-select-option ng-repeat="service in services" value="{{service.value}}">{{service.label}}</rx-select-option>
           </rx-multi-select>
         </rx-input>

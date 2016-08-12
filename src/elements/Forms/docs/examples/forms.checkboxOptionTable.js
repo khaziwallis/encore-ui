@@ -30,10 +30,8 @@ angular.module('demoApp')
             'falseValue': 'unchecked'
         }
     ];
-
-    $scope.intermediate = {
-        table: {
-            checkbox: [true, 'unchecked'], // example with first checkbox automatically checked
-        }
+    // example with first checkbox automatically checked
+    $scope.table = {
+        checkbox: [true, 'unchecked']
     };
 });

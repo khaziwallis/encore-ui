@@ -10,7 +10,7 @@
             name="favBeatle"
             id="favBeatle_{{$index}}"
             value="{{beatle}}"
-            ng-model="intermediate.favoriteBeatle" />
+            ng-model="favoriteBeatle" />
           <label for="favBeatle_{{$index}}">{{beatle}}</label>
         </rx-input>
         <rx-input>
@@ -18,7 +18,7 @@
             name="favBeatle"
             id="favBeatle_all"
             value="all"
-            ng-model="intermediate.favoriteBeatle" />
+            ng-model="favoriteBeatle" />
           <label for="favBeatle_all">All of the above</label>
         </rx-input>
         <rx-input>
@@ -27,7 +27,7 @@
             id="favBeatle_none"
             value="none"
             disabled
-            ng-model="intermediate.favoriteBeatle" />
+            ng-model="favoriteBeatle" />
           <label for="favBeatle_none">None of the above</label>
         </rx-input>
       </rx-field-content>
@@ -65,7 +65,7 @@
           <rx-prefix>
             <rx-toggle-switch
               id="setting1"
-              ng-model="intermediate.settings.first"
+              ng-model="settings.first"
               ></rx-toggle-switch>
             <label for="setting1">Setting 1</label>
           </rx-prefix>
@@ -75,7 +75,7 @@
           <rx-prefix>
             <rx-toggle-switch
               id="setting2"
-              ng-model="intermediate.settings.second"
+              ng-model="settings.second"
               ></rx-toggle-switch>
             <label for="setting2">Setting 2</label>
           </rx-prefix>
@@ -85,7 +85,7 @@
           <rx-prefix>
             <rx-toggle-switch
               id="setting3"
-              ng-model="intermediate.settings.third"
+              ng-model="settings.third"
               disabled="true"
               ></rx-toggle-switch>
             <label for="setting3">Setting 3</label>

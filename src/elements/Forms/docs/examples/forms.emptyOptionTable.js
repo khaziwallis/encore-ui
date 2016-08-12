@@ -23,9 +23,7 @@ angular.module('demoApp')
 
     $scope.optionTableEmptyData = [];
 
-    $scope.intermediate = {
-        table: {
-            empty: [true, 'unchecked']
-        }
+    $scope.table = {
+        empty: [true, 'unchecked']
     };
 });

@@ -16,7 +16,7 @@
             <input rx-radio
             id="radDefault"
             name="radAdvanced"
-            ng-model="advanced.radChoice"
+            ng-model="radChoice"
             value="default" />
             <label for="radDefault">Default</label>
           </rx-prefix>
@@ -26,11 +26,11 @@
             <input rx-radio
                  id="radCustom"
                  name="radAdvanced"
-                 ng-model="advanced.radChoice"
+                 ng-model="radChoice"
                  value="custom" />
             <label for="radCustom">Custom:</label><br />
           </rx-prefix>
-          <select rx-select ng-disabled="advanced.radChoice !== 'custom'">
+          <select rx-select ng-disabled="radChoice !== 'custom'">
             <option>Option 1</option>
             <option>Option 2</option>
             <option>Option 3</option>
@@ -48,11 +48,11 @@
       <rx-field-content>
         <rx-input>
           <rx-prefix>
-            <input rx-checkbox ng-model="advanced.inputEnabled" />
+            <input rx-checkbox ng-model="inputEnabled" />
             <label>Label:</label>
           </rx-prefix>
           <input type="text"
-                 ng-disabled="!advanced.inputEnabled"
+                 ng-disabled="!inputEnabled"
                  placeholder="Enter Text" />
         </rx-input>
         <rx-help-text>
@@ -64,7 +64,7 @@
 
   </rx-form-section>
 
-  <h4>With <code>controlled-width</code> section attribute</h3>
+  <h4>With <code>controlled-width</code> section attribute</h4>
   <rx-help-text>
     To prevent fields from taking up too much horizontal space, use the <code>controlled-width</code>
     <br>
@@ -78,6 +78,7 @@
   <rx-form-section controlled-width>
     <!-- Dropdown + Text + Dropdown -->
     <rx-field>
+      <h5>Dropdown + Text Input + Dropdown</h5>
       <rx-field-name>Name:</rx-field-name>
       <rx-field-content>
         <rx-input>
@@ -98,11 +99,13 @@
             </select>
           </rx-suffix>
         </rx-input>
-        <rx-help-text>Dropdown + Text Input + Dropdown</rx-help-text>
       </rx-field-content>
     </rx-field>
 
     <rx-field>
+      <h5>
+          Using <code>rx-search-box</code>.
+      </h5>
       <rx-field-name>Search Box:</rx-field-name>
       <rx-field-content>
         <rx-input>
@@ -110,9 +113,6 @@
             ng-model="demoSearch"
             rx-placeholder="'Filter by...'"></rx-search-box>
         </rx-input>
-        <rx-help-text>
-          Using <code>rx-search-box</code>.
-        </rx-help-text>
       </rx-field-content>
     </rx-field>
   </rx-form-section>

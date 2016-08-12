@@ -19,14 +19,12 @@ angular.module('demoApp')
         'Hurt you'
     ];
 
-    $scope.intermediate = {
-        favoriteBeatle: 'all',
-        settings: {
-            first: true,
-            second: false,
-            third: true,
-            fourth: false
-        }
+    $scope.favoriteBeatle = 'all';
+    $scope.settings = {
+        first: true,
+        second: false,
+        third: true,
+        fourth: false
     };
 
 });

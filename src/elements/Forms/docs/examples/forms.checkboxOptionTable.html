@@ -7,13 +7,13 @@
               columns="optionTableColumns"
               type="checkbox"
               id="checkboxOptionTable"
-              model="intermediate.table.checkbox"
+              model="table.checkbox"
               field-id="optionCheckboxTable"
               data="optionTableCheckboxData"
               required="true"
               ></rx-option-table>
         </rx-input>
-        <rx-help-text ng-repeat="val in intermediate.table.checkbox">
+        <rx-help-text ng-repeat="val in table.checkbox">
           Item {{$index + 1}} Value: {{val}}
         </rx-help-text>
       </rx-field-content>
