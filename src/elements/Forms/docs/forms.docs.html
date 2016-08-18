@@ -12,6 +12,37 @@
   </li>
 </ul>
 
+<h3><rx-permalink>Label</rx-permalink></h3>
+<ul class="list">
+  <li>
+    You should use the <code>&lt;label for="formControlId"&gt;</code>
+    format when defining your HTML labels.
+    <ul>
+      <li>
+        The <code>for</code> attribute connects the label to an
+        appropriate form control. When the label is clicked, wherever it
+        is placed in the DOM, it will focus or activate its
+        corresponding form control.
+      </li>
+      <li>
+        <strong class="msg-warn">
+          DO NOT wrap the control within a label element.
+        </strong>
+        <ul>
+          <li>
+            CSS does not have proper selectors to style label text based
+            on control state
+          </li>
+        </ul>
+      </li>
+      <li>
+        You should place an HTML label around text in an appropriate
+        rxFieldName element.
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <h3><rx-permalink>Labels and Inputs</rx-permalink></h3>
 <ul class="list">
   <li>

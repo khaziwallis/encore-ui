@@ -30,6 +30,10 @@
         "text area",
         "text",
         "time",
-        "validation"
+        "validation",
+        "rxFieldName",
+        "field",
+        "name",
+        "label"
     ]
 }
